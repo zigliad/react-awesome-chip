@@ -14,7 +14,7 @@ npm install react-awesome-chip
 
 [Live demo, go check it out!](https://zigliad.github.io/react-awesome-chip/)
 
-<a href="https://imgur.com/n2XVyHp"><img src="https://i.imgur.com/n2XVyHp.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/n2XVyHp"><img src="https://i.imgur.com/n2XVyHp.png" title="react-awesome-chip" /></a>
 
 ## Usage
 
