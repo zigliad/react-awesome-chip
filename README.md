@@ -106,4 +106,4 @@ You can configure the chips that will start as ON, the type of the ON chips, the
 
 ## License
 
-MIT © [Liad Zigdon](https://github.com/Liad Zigdon)
+MIT © [Liad Zigdon](https://github.com/zigliad)
