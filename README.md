@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-awesome-chip
+npm install react-awesome-chip
 ```
 
 ## Example
@@ -23,11 +23,12 @@ import React from "react";
 import { Chip } from "react-awesome-chip";
 
 export default () => {
-	return <Chip title="Awesome" color="#536dfe" />;
+  return <Chip title="Awesome" color="#536dfe" />;
 };
 ```
 
 But the awesome chip has more to offer! You can configure its color, size and type:
+
 ```tsx
 <Chip
   title="Awesome"
@@ -38,12 +39,14 @@ But the awesome chip has more to offer! You can configure its color, size and ty
 />
 ```
 
-The available options for ther "size" prop are: "sm" | "md" | "lg".
-The available options for ther "type" prop are: "filled" | "outlined" | "filledOutlined" | "text" | "filledBold".
+The available options for ther "size" prop are: sm, md, lg.<br />
+The available options for ther "type" prop are: filled, outlined, filledOutlined, text, filledBold.
 
 ### ChipsView
 
-The ChipsView component accepts one property, which is an array of props of chips. The component nicely renders all the chips in a single view.
+The ChipsView component accepts one property, which is an array of props of chips.<br />
+The component nicely renders all the chips in a single view.
+
 ```tsx
 <ChipsView
   chipsProps={[
@@ -69,9 +72,9 @@ The ChipsView component accepts one property, which is an array of props of chip
 
 ### useFilterView
 
-This hook is very helpful when using filter chips.
-It accepts its chips props, and a unique id for every one of the chips.
-The hook returns a state of the ids that are currently ON, and a FilterView component.
+This hook is very helpful when using filter chips.<br />
+It accepts its chips' props, and a unique id for every one of the chips.<br />
+The hook returns a state of the ids that are currently ON, and a FilterView component.<br />
 The component can be placed as a JSX element, with an onClick prop which accepts the current ON ids.
 
 ```tsx
@@ -79,24 +82,25 @@ import React from "react";
 import { useFilterView } from "react-awesome-chip";
 
 export default () => {
-	const [idsOn, FilterView] = useFilterView([
-		{ color: "#536dfe", title: "Option 1", size: "md", id: 1 },
-		{ color: "#536dfe", title: "Option 2", size: "md", id: 2 },
-		{ color: "#536dfe", title: "Option 3", size: "md", id: 3 },
-		{ color: "#536dfe", title: "Option 4", size: "md", id: 4 },
-	]);
+  const [idsOn, FilterView] = useFilterView([
+    { color: "#536dfe", title: "Option 1", size: "md", id: 1 },
+    { color: "#536dfe", title: "Option 2", size: "md", id: 2 },
+    { color: "#536dfe", title: "Option 3", size: "md", id: 3 },
+    { color: "#536dfe", title: "Option 4", size: "md", id: 4 },
+  ]);
 
-	return (
-		<FilterView
-			onClick={(idsOn) =>
-				console.log("Chips picked: " + idsOn.join(", "))
-			}
-		/>
-	);
+  return (
+    <FilterView
+      onClick={(idsOn) =>
+        console.log("Chips picked: " + idsOn.join(", "))
+      }
+    />
+  );
 };
 ```
 
-The second parameter of this hook is a config object. You can configure the chips that will start as ON, the type of the ON chips, the type of the OFF chips, and some more.
+The second parameter of this hook is a config object.<br />
+You can configure the chips that will start as ON, the type of the ON chips, the type of the OFF chips, and some more.
 
 ## License
 
