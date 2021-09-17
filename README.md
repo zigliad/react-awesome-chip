@@ -11,6 +11,7 @@ npm install react-awesome-chip
 ```
 
 ## Example
+
 [Go check it out!](https://zigliad.github.io/react-awesome-chip/)
 
 ## Usage
@@ -18,24 +19,25 @@ npm install react-awesome-chip
 ### Chip
 
 The most simple usage of the awesome chip will be:
+
 ```tsx
-import React from "react";
-import { Chip } from "react-awesome-chip";
+import React from 'react'
+import { Chip } from 'react-awesome-chip'
 
 export default () => {
-  return <Chip title="Awesome" color="#536dfe" />;
-};
+  return <Chip title='Awesome' color='#536dfe' />
+}
 ```
 
 But the awesome chip has more to offer! You can configure its color, size and type:
 
 ```tsx
 <Chip
-  title="Awesome"
-  color="#536dfe"
-  type="outlined"
-  size="lg"
-  onClick={() => console.log("Very Awesome")}
+  title='Awesome'
+  color='#536dfe'
+  type='outlined'
+  size='lg'
+  onClick={() => console.log('Very Awesome')}
 />
 ```
 
@@ -51,21 +53,21 @@ The component nicely renders all the chips in a single view.
 <ChipsView
   chipsProps={[
     {
-      title: "Awesome 1",
-      color: "#536dfe",
-      type: "filledBold",
+      title: 'Awesome 1',
+      color: '#536dfe',
+      type: 'filledBold'
     },
     {
-      title: "Awesome 2",
-      color: "#38c979",
-      size: "sm",
-      onClick: console.log,
+      title: 'Awesome 2',
+      color: '#38c979',
+      size: 'sm',
+      onClick: console.log
     },
     {
-      title: "Awesome 3",
-      color: "#ffbe51",
-      type: "filledOutlined",
-    },
+      title: 'Awesome 3',
+      color: '#ffbe51',
+      type: 'filledOutlined'
+    }
   ]}
 />
 ```
@@ -78,25 +80,23 @@ The hook returns a state of the ids that are currently ON, and a FilterView comp
 The component can be placed as a JSX element, with an onClick prop which accepts the current ON ids.
 
 ```tsx
-import React from "react";
-import { useFilterView } from "react-awesome-chip";
+import React from 'react'
+import { useFilterView } from 'react-awesome-chip'
 
 export default () => {
   const [idsOn, FilterView] = useFilterView([
-    { color: "#536dfe", title: "Option 1", size: "md", id: 1 },
-    { color: "#536dfe", title: "Option 2", size: "md", id: 2 },
-    { color: "#536dfe", title: "Option 3", size: "md", id: 3 },
-    { color: "#536dfe", title: "Option 4", size: "md", id: 4 },
-  ]);
+    { color: '#536dfe', title: 'Option 1', size: 'md', id: 1 },
+    { color: '#536dfe', title: 'Option 2', size: 'md', id: 2 },
+    { color: '#536dfe', title: 'Option 3', size: 'md', id: 3 },
+    { color: '#536dfe', title: 'Option 4', size: 'md', id: 4 }
+  ])
 
   return (
     <FilterView
-      onClick={(idsOn) =>
-        console.log("Chips picked: " + idsOn.join(", "))
-      }
+      onClick={(idsOn) => console.log('Chips picked: ' + idsOn.join(', '))}
     />
-  );
-};
+  )
+}
 ```
 
 The second parameter of this hook is a config object.<br />
