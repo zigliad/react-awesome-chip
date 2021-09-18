@@ -17,10 +17,10 @@ const chipsProps: PropsOf<typeof Chip>[] = generate(66)
 const App = () => {
   const [idsOn, FilterView] = useFilterView(
     [
-      { color: '#536dfe', title: 'Option 1', size: 'md', id: 1 },
-      { color: '#536dfe', title: 'Option 2', size: 'md', id: 2 },
-      { color: '#536dfe', title: 'Option 3', size: 'md', id: 3 },
-      { color: '#536dfe', title: 'Option 4', size: 'md', id: 4 }
+      { color: '#536dfe', title: 'Option 1', id: 1 },
+      { color: '#536dfe', title: 'Option 2', id: 2 },
+      { color: '#536dfe', title: 'Option 3', id: 3 },
+      { color: '#536dfe', title: 'Option 4', id: 4 }
     ],
     {
       defaultIdsOn: [3]

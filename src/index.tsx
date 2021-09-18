@@ -111,7 +111,7 @@ export const useFilterView = <T,>(
   chipsData: {
     color: string
     title: string
-    size: ChipSize
+    size?: ChipSize
     id: T
   }[],
   config?: {
@@ -169,7 +169,7 @@ export const useFilterView = <T,>(
             <Chip
               color={data.color}
               title={data.title}
-              size={data.size}
+              size={data.size || 'md'}
               type={idsOn.indexOf(data.id) > -1 ? typeOn : typeOff}
               onClick={() => {
                 const newOn = onChipClick(data.id)
